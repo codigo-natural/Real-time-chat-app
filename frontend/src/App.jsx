@@ -1,11 +1,12 @@
+import { Login } from "./pages/login/Login";
+import { SignUp } from "./pages/signup/SignUp";
+
 export default function App() {
 
   return (
-    <>
-      <button className="btn btn-outline">Default</button>
-      <button className="btn btn-outline btn-primary">Primary</button>
-      <button className="btn btn-outline btn-secondary">Secondary</button>
-      <button className="btn btn-outline btn-accent">Accent</button>
-    </>
+    <div className="p-4 h-screen flex items-center justify-center">
+      {/* <Login /> */}
+      <SignUp />
+    </div>
   )
 }
