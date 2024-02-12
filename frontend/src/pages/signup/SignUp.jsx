@@ -86,12 +86,19 @@ export const SignUp = () => {
 
           <GenderCheckbox onCheckboxChange={handleCheckboxChange} selectedGender={inputs.gender} />
 
-          <Link to="/login" className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block">
-            {"Don't"} have an account?
+          <Link
+            to="/login"
+            className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block"
+          >
+            Already have an account?
           </Link>
 
           <div>
-            <button className="btn btn-block btn-sm mt-2">Sign Up</button>
+            <button
+              disabled={loading}
+              className="btn btn-block btn-sm mt-2">
+              {loading ? <span className="loading loading-spinner"></span> : "Sign Up"}
+            </button>
           </div>
         </form>
       </div>
